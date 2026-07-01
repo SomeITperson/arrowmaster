@@ -1,0 +1,24 @@
+{
+  "name": "@duels/server",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "start": "tsx src/index.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@duels/shared": "*",
+    "@colyseus/redis-driver": "^0.17.7",
+    "@colyseus/redis-presence": "^0.17.7",
+    "@colyseus/schema": "^4.0.26",
+    "colyseus": "^0.17.10",
+    "ioredis": "^5.11.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.22.4",
+    "typescript": "^6.0.3"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "name": "duels",
+  "version": "0.0.1",
+  "description": "2D online duel game (Phaser 4 client + Colyseus server)",
+  "type": "module",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "vite --host",
+    "build": "tsc --noEmit && vite build",
+    "typecheck": "tsc --noEmit",
+    "server": "npm --workspace @duels/server run dev",
+    "typecheck:shared": "npm --workspace @duels/shared run typecheck",
+    "typecheck:server": "npm --workspace @duels/server run typecheck",
+    "typecheck:all": "npm run typecheck:shared && npm run typecheck && npm run typecheck:server"
+  },
+  "dependencies": {
+    "@duels/shared": "*",
+    "colyseus.js": "^0.16.22",
+    "phaser": "^4.2.0"
+  },
+  "devDependencies": {
+    "typescript": "^6.0.3",
+    "vite": "^8.1.0"
+  }
+}
